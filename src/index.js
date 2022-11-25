@@ -30,9 +30,7 @@ function onInputChange(e) {
   fetchCountries(name)
     .then(countries => {
       if (countries.length > 10) {
-        return Notify.info(
-          'Too many matches found. Please enter a more specific name.'
-        );
+        return Notify.info('Too many matches found. Please enter a more specific name.');
       }
       renderCountryList(countries);
     })
